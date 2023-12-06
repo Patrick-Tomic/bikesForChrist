@@ -1,3 +1,4 @@
+import buildImageSlider from "./slider.js"
 export default function buildHome(){
     const main = document.querySelector('main')
     const donateDiv = document.createElement('div')
@@ -13,5 +14,5 @@ export default function buildHome(){
     aboutUs.appendChild(aboutHead)
     aboutUs.appendChild(aboutP)
     main.appendChild(aboutUs)
-
+    buildImageSlider()
 }

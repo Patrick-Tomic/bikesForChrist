@@ -3,6 +3,7 @@ import buildHome from './buildHome'
 import photo from './logo.jpeg'
 import yt from './yt.png'
 import fb from './fb.jpg'
+import a from './imgs/bike.jpg'
 import twitter from './twitter.png'
 const header = document.querySelector('header')
 const main = document.querySelector('main')
@@ -100,4 +101,4 @@ while(count <3 ){
 }
 socials.classList.add('socials')
 header.appendChild(socials)
-buildHome()    
+buildHome()
