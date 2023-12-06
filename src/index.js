@@ -1,4 +1,5 @@
 import './style.scss'
+import buildHome from './buildHome'
 import photo from './logo.jpeg'
 import yt from './yt.png'
 import fb from './fb.jpg'
@@ -19,7 +20,7 @@ heading.classList.add('title')
 headerContainer.appendChild(heading)
 const navbar = document.createElement('table')
 const tr = document.createElement('tr')
-for(let i = 0; i< 7; i++){
+for(let i = 0; i< 6; i++){
     const th = document.createElement('th')
     switch(i){
         case 0: 
@@ -35,14 +36,10 @@ for(let i = 0; i< 7; i++){
             tr.appendChild(th)
             break
         case 2:
-            th.innerHTML = 'Donations'
-            tr.appendChild(th)
-            break
-        case 3:
             th.innerHTML = 'Missions'
             tr.appendChild(th)
             break
-        case 4:
+        case 3:
             th.innerHTML = 'Volunteer'
             th.classList.add('volunteer')
            /*  const td = document.createElement('td')
@@ -50,11 +47,11 @@ for(let i = 0; i< 7; i++){
             th.appendChild(td) */
             tr.appendChild(th)
             break
-        case 5:
+        case 4:
             th.innerHTML = 'Events'
             tr.appendChild(th)
             break
-        case 6: 
+        case 5: 
             th.innerHTML = 'Contact'
             tr.appendChild(th)
             break
@@ -103,4 +100,4 @@ while(count <3 ){
 }
 socials.classList.add('socials')
 header.appendChild(socials)
-    
+buildHome()    
