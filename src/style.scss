@@ -31,10 +31,19 @@ header{
         border-radius: 20px;
     }
     .headContainer{
+        div{
+            display: flex;
         h1{
             font-size: 74px;
             color: white;
         }
+        h3{
+            margin-top: 4vh;
+            margin-left: 3vw;
+            text-decoration: underline;
+            color: white;
+        }
+    }
         table{
             color: white;
              th{
@@ -77,15 +86,28 @@ header{
                 }
             }
     }
+    p{
+        text-align: center;
+        margin-top: 3vh;
+        font-size: 18px;
+        color: white;
+        font-weight: bold;
+    }
+    h5{
+        text-align: center;
+        color: white;
+        font-size: 15px;
+    }
     }
 }
 main{
-    height: 125vh;
+    row-gap: 1vh;
+    height: 155vh;
      display: grid;
      grid-template-columns: 1fr 1fr;
     background-color: 	#28282B;
     .about{
-         
+        margin-bottom: 15vh;
        height: 32vh;
    margin-left: 5vw;
         width: 40vw;
@@ -172,6 +194,7 @@ main{
     }
 }
 .scriptDiv{
+     
     background-color: $jetBlack;
     display: flex;
     flex-direction: column;
@@ -195,16 +218,17 @@ main{
     }
 }
 .videoDiv{
+    height: 55vh;
     grid-column: 1/3;
     display: flex;
     border-radius: 10px;
     background-color: $jetBlack;
     margin-left: 3vw;
     margin-right: 3vw;
-    border: solid 1px red;
+    
     iframe{
         margin-left: 1vw;
-        margin-top: 1vh;
+        margin-top: 5vh;
          border-radius: 10px;
         width: 50vw;
         height: 45vh;
@@ -214,7 +238,7 @@ main{
         margin-bottom: 5vh;
         margin-left: 4vw;
         width: 35vw;
-        border: 1px solid red;
+         
         display: flex;
         flex-direction: column;
     h3{
@@ -226,6 +250,30 @@ main{
         color: white;
     }
     }
+}
+.partnerDiv{
+    margin: 0 3vw;
+    background-color: $jetBlack;
+    grid-column: 1/3;
+    border-radius: 10px;
+    h2{
+        text-align: center;
+        color: $blue;
+        font-size: 30px;
+    }
+.partners{
+   
+   
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    li{
+        margin: 10px 10px;
+        font-size: 20px;
+        color: white;
+        text-decoration: underline;
+    }
+}
 }
 }
 @keyframes jumpOn{
@@ -241,18 +289,52 @@ main{
 }
 @media(max-width:1400px){
     main{
+        height: 160vh;
         .donate{
             h1{
             min-height: 30vh;
-            
+            margin-top: 7vh;
             max-height: 43vh;
+            }
+            .sliderWrap{
+                margin-top: 11vh;
+            }
+        }
+        .videoDiv{
+            iframe{
+                margin-left: 5vw;
+                width: 40vw;
+            }
+            .description{
+                p{
+                    font-size: 20px;
+                }
+                h3{
+                    font-size: 28px;
+                }
             }
         }
     }
 }
 @media(max-width:1100px){
+    header{
+        height: 40vh;
+        .headContainer{
+            div{
+                h1{
+                    font-size: 50px;
+                }
+                h3{
+                    margin-top: 2vh;
+                }
+            }
+        }
+    }
     main{
         height: 170vh;
+        .scriptDiv{
+            height: 20vh;
+        }
         .about{
             p{
                 padding: 10px;
@@ -263,11 +345,11 @@ main{
         .donate{
            
             h1{
-                margin-top: 15vh;
+                margin-top: 10vh;
                 max-height: 35vh;
             }
             .sliderWrap{
-                margin-top: 20vh;
+                margin-top:15vh;
                 max-height: 28vh;
                 .imgSlider{
                     img{

@@ -55,8 +55,23 @@ export default function buildHome(){
     vidHeader.innerHTML = 'Who we are'
     videoDescription.appendChild(vidHeader)
     const vidParagraph = document.createElement('p')
-    vidParagraph.innerHTML = `We provide donated bicycles to the needy, veterans, underprivileged children and seniors while also ministering to their spiritual needs and sharing God's love with them `
+    vidParagraph.innerHTML = `We provide donated bicycles to the needy, veterans, underprivileged children and seniors while also ministering to their spiritual needs and sharing God's love with them<br><br> The most important part in all of this is that those who receive bikes know that someone loves and cares for them. "Through giving we show love, and it's the same love and compassion that Jesus showed us" Pat says. With every bicycle, a bible goes along with it. "It's the handbook that gets us through this life and into heaven to be with God for all eternity." `
     videoDescription.appendChild(vidParagraph)
     videoDiv.appendChild((videoDescription))
     main.appendChild(videoDiv)
+    const partners = document.createElement('ul')
+    partners.classList.add('partners')
+    const partnerArr = ['FL Department of Corrections', `Hillsborough County Sheriff's department`, `Amazing Love Ministries`, `ECHO`, 'Tampa Crossroads', `Kay's Ministry`, 'Gracepoint Wellness', 'Northside Mental Health', `A Kid's Place`, `Florida Baptist Children's Home`, `Liberty Manor`, `Women's Resource Center of Tampa`, `Metropolitan Ministries`, `Kinship- Children's Home`, `Catholic Charities`, `Blanket Tampa Bay`,`The Lord's Lighthouse`, `Everyday Blessings`, `Family Promise of Greater Brandon`, `Tampa Homeless Outreach`, `Showered and Empowered`, `Marine Families`, `RCMA`, `The Salvation Army`, `New Life Village`, `St.Vincent De Paul`]
+    for( let i = 0; i<partnerArr.length;i++){
+        const li = document.createElement('li')
+        li.innerHTML = partnerArr[i]
+        partners.appendChild(li)
+    }
+    const partnerDiv = document.createElement('div')
+    const partnerHead = document.createElement('h2')
+    partnerHead.innerHTML = 'Our Partners'
+    partnerDiv.appendChild(partnerHead)
+    partnerDiv.classList.add('partnerDiv')
+    partnerDiv.appendChild(partners)
+    main.appendChild(partnerDiv)
   }

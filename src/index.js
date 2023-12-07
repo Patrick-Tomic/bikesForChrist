@@ -18,7 +18,14 @@ heading.innerHTML = 'Bikes For Christ'
 const headerContainer = document.createElement('div')
 headerContainer.classList.add('headContainer')
 heading.classList.add('title')
-headerContainer.appendChild(heading)
+const reachUs = document.createElement('h3')
+reachUs.innerHTML = 'Call Us: 813-533-9177'
+const headingDiv = document.createElement('div')
+headingDiv.appendChild(heading)
+headingDiv.appendChild(reachUs)
+
+headerContainer.appendChild(headingDiv)
+
 const navbar = document.createElement('table')
 const tr = document.createElement('tr')
 for(let i = 0; i< 6; i++){
@@ -61,6 +68,12 @@ for(let i = 0; i< 6; i++){
             }
         navbar.appendChild(tr)
 headerContainer.appendChild(navbar)
+const hebrews = document.createElement('p')
+    hebrews.innerHTML = `And do not forget to do good and to share with others, for with such sacrifices God is pleased`
+const h5 = document.createElement('h5')
+h5.innerHTML = ' Hebrews 13:16'
+headerContainer.appendChild(hebrews)
+headerContainer.appendChild(h5)
 header.appendChild(headerContainer)
 const socials = document.createElement('div')
 let count = 0
