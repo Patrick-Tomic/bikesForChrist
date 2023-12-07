@@ -25,7 +25,7 @@ import x from './imgs/bikeX.jpg'
 import l from './imgs/bikeL.jpg' 
 export default function buildImageSlider(){
     const bikes = [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,s,t,u,v,w,x ]
-    const main = document.querySelector('main')
+    const donate = document.querySelector('.donate')
     const slider = document.createElement('div')
     slider.classList.add('imgSlider')
     const wrap = document.createElement('div')
@@ -37,18 +37,20 @@ export default function buildImageSlider(){
     }
     let count = 0
     var interval = setInterval(()=>{
-        let vw = 15
+        let vw = 26
         if(count ==-20){
             count = 0
             vw = vw*count
+            slider.style.transition = 'none'
             slider.style.transform = `translateX(${vw}vw)`
         }else{
             count--
             vw = vw*count
             slider.style.transform = `translateX(${vw}vw)`
+            slider.style.transition = 'transform 1s ease-in-out'
             }
     },5000)
     wrap.appendChild(slider)
-    main.appendChild(wrap)
+    donate.appendChild(wrap)
 }
  

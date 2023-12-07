@@ -28,6 +28,7 @@ for(let i = 0; i< 6; i++){
             th.innerHTML = 'Home'
             th.addEventListener('click',()=>{
                 main.innerHTML = ''
+                buildHome()
 
             })
             tr.appendChild(th)

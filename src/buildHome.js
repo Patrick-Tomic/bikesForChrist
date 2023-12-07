@@ -2,9 +2,8 @@ import buildImageSlider from "./slider.js"
 export default function buildHome(){
     const main = document.querySelector('main')
     const donateDiv = document.createElement('div')
-    const donateAnchor = document.createElement('a')
     donateDiv.classList.add('donate')
-    donateDiv.appendChild(donateAnchor)
+  
     const aboutUs = document.createElement('div')
     aboutUs.classList.add('about')
     const aboutP = document.createElement('p')
@@ -14,5 +13,15 @@ export default function buildHome(){
     aboutUs.appendChild(aboutHead)
     aboutUs.appendChild(aboutP)
     main.appendChild(aboutUs)
+    const h1 = document.createElement('h1')
+    const donateAnchor = document.createElement('button')
+    donateAnchor.innerHTML = 'Donate today!'
+    donateAnchor.addEventListener('click',()=>{
+        main.innerHTML = ''
+    })
+    h1.appendChild(donateAnchor)
+    donateDiv.appendChild(h1)
+     
+    main.appendChild(donateDiv)
     buildImageSlider()
-}
+  }
